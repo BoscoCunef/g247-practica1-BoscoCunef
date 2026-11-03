@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plantilla FC | Jugadores</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div><strong>⚽ Plantilla FC</strong><span> · Gestión de jugadores</span></div>
+    <nav aria-label="Navegación"><a href="#listado">Plantilla</a><a href="#editor">Nuevo jugador</a></nav>
+  </header>
+  <main class="container">
+    <section class="intro"><h1>Gestor de jugadores</h1><p>Consulta la plantilla, busca futbolistas y gestiona sus fichas sin recargar la página.</p></section>
+    <p id="loading" class="loading" role="status" hidden>Procesando petición…</p>
+    <p id="global-error" class="alert" role="alert" hidden></p>
+    <div class="layout">
+      <section class="panel" id="listado" aria-labelledby="listado-title">
+        <h2 id="listado-title">Plantilla <small id="count"></small></h2>
+        <form id="filters" class="filters">
+          <label>Buscar por nombre<input name="search" type="search" placeholder="Ej. Ana"></label>
+          <label>Estado<select name="activo"><option value="">Todos</option><option value="true">Activos</option><option value="false">Inactivos</option></select></label>
+          <label>Posición<select name="posicion"><option value="">Todas</option><option value="portero">Portero</option><option value="defensa">Defensa</option><option value="centrocampista">Centrocampista</option><option value="delantero">Delantero</option></select></label>
+          <button type="submit" class="secondary">Filtrar</button>
+        </form>
+        <p id="empty" class="empty" hidden>No hay jugadores que coincidan con la búsqueda.</p>
+        <div id="players" class="players" aria-live="polite"></div>
+        <p id="stats" class="stats"></p>
+      </section>
+      <section class="panel" id="editor" aria-labelledby="editor-title">
+        <h2 id="editor-title">Añadir jugador</h2>
+        <form id="player-form" novalidate>
+          <label for="nombre">Nombre completo</label>
+          <input id="nombre" name="nombre" maxlength="60" required>
+          <small id="error-nombre" class="field-error"></small>
+          <label for="dorsal">Dorsal (1–99)</label>
+          <input id="dorsal" name="dorsal" type="number" min="1" max="99" step="1" required>
+          <small id="error-dorsal" class="field-error"></small>
+          <label for="posicion">Posición</label>
+          <select id="posicion" name="posicion" required>
+            <option value="">Selecciona una opción</option><option value="portero">Portero</option>
+            <option value="defensa">Defensa</option><option value="centrocampista">Centrocampista</option><option value="delantero">Delantero</option>
+          </select>
+          <small id="error-posicion" class="field-error"></small>
+          <label class="checkbox"><input id="activo" name="activo" type="checkbox" checked> Jugador activo</label>
+          <small id="error-activo" class="field-error"></small>
+          <small id="error-body" class="field-error"></small>
+          <div class="buttons"><button id="save" type="submit">Guardar jugador</button><button id="cancel" class="secondary" type="button" hidden>Cancelar edición</button></div>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
