@@ -1,9 +1,14 @@
-# Práctica 1 — Foundations API · Plantilla FC
+**Tema:** Selección Española de Fútbol.
 
-**Integrantes:** Bosco Vega de Seoane y Jorge Muñoz Magro
+**Recurso:** Jugadores de la Selección Española.
 
-**Tema:** Gestión de jugadores de un club de fútbol.
+**Descripción:** Esta práctica continúa el proyecto desarrollado en los laboratorios del bloque I, dedicado a la Selección Española de Fútbol.
 
+Se ha desarrollado una aplicación cliente-servidor utilizando Node.js, Express, HTML, CSS y JavaScript.
+
+La aplicación permite gestionar los jugadores de la selección mediante una API REST, incluyendo operaciones de consulta, creación, modificación y eliminación de jugadores.
+
+También incorpora búsquedas, filtros por posición, validación de datos y estadísticas de la plantilla.
 ## 1. Instalación y ejecución
 
 Requisitos: Node.js **18 o superior** y npm.
