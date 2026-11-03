@@ -1,8 +1,8 @@
 # Práctica 1 — Foundations API · Plantilla FC
 
-**Integrantes:** Pendiente de completar con el nombre real del alumno o los dos integrantes antes de la entrega.
+**Integrantes:** Bosco Vega de Seoane y Jorge Muñoz Magro
 
-**Tema:** Gestión de jugadores de un club de fútbol. **ATENCIÓN:** el tema ha de coincidir con el elegido en los laboratorios del bloque I; si era otro, hay que adaptar este ejemplo antes de entregar.
+**Tema:** Gestión de jugadores de un club de fútbol.
 
 ## 1. Instalación y ejecución
 
